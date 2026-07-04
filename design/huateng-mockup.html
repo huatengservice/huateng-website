@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>華騰工程行 — Mockup</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy-900:#0F1B33;
+    --navy-800:#1B2A4A;
+    --navy-600:#33456B;
+    --amber-500:#D98F3A;
+    --amber-600:#BD7527;
+    --paper:#F6F3ED;
+    --paper-card:#FFFFFF;
+    --ink-soft:#5A6B85;
+    --line:#E4DFD4;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:var(--paper);
+    color:var(--navy-800);
+    font-family:'Noto Sans TC', sans-serif;
+    line-height:1.7;
+  }
+  h1,h2,h3{ font-family:'Noto Serif TC', serif; color:var(--navy-900); }
+  .eyebrow{
+    font-family:'JetBrains Mono', monospace;
+    font-size:0.72rem;
+    letter-spacing:0.14em;
+    color:var(--amber-600);
+    text-transform:uppercase;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:16px; height:2px;
+    background:var(--amber-500);
+    display:inline-block;
+  }
+  .wrap{ max-width:1080px; margin:0 auto; padding:0 28px; }
+
+  /* pipe-joint / circuit divider signature element */
+  .trade-divider{
+    width:100%;
+    height:22px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:0;
+    opacity:0.55;
+  }
+  .trade-divider svg{ width:100%; max-width:1080px; }
+
+  /* HEADER */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(246,243,237,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:16px 28px; max-width:1080px; margin:0 auto;
+  }
+  .brand{ display:flex; align-items:center; gap:10px; }
+  .brand-mark{
+    width:38px; height:38px; border-radius:50%;
+    background:linear-gradient(145deg, var(--navy-800), var(--navy-900));
+    display:flex; align-items:center; justify-content:center;
+    border:2px solid var(--amber-500);
+  }
+  .brand-mark svg{ width:20px; height:20px; }
+  .brand-name{ font-family:'Noto Serif TC', serif; font-weight:700; font-size:1.15rem; color:var(--navy-900); }
+  .brand-sub{ font-family:'JetBrains Mono', monospace; font-size:0.62rem; letter-spacing:0.1em; color:var(--ink-soft); }
+
+  nav ul{ list-style:none; display:flex; gap:32px; }
+  nav a{
+    text-decoration:none; color:var(--navy-800); font-size:0.92rem; font-weight:500;
+    position:relative; padding-bottom:4px;
+  }
+  nav a.active::after{
+    content:""; position:absolute; left:0; bottom:0; width:100%; height:2px; background:var(--amber-500);
+  }
+  .header-actions{ display:flex; align-items:center; gap:14px; }
+  .lang-toggle{
+    display:flex; border:1px solid var(--navy-600); border-radius:999px; overflow:hidden; font-size:0.75rem;
+  }
+  .lang-toggle button{
+    border:none; background:transparent; padding:6px 12px; cursor:pointer; font-family:'JetBrains Mono',monospace;
+    color:var(--navy-600);
+  }
+  .lang-toggle button.on{ background:var(--navy-800); color:#fff; }
+  .call-btn{
+    background:var(--amber-500); color:#fff; border:none; padding:10px 18px; border-radius:6px;
+    font-weight:700; font-size:0.85rem; cursor:pointer; white-space:nowrap;
+  }
+
+  /* HERO */
+  .hero{ padding:88px 0 70px; position:relative; overflow:hidden; }
+  .hero-grid{ display:grid; grid-template-columns:1.15fr 0.85fr; gap:56px; align-items:center; }
+  .hero h1{
+    font-size:2.85rem; font-weight:900; line-height:1.28; margin:18px 0 20px; letter-spacing:0.01em;
+  }
+  .hero h1 .accent{ color:var(--amber-600); }
+  .hero p.lead{ font-size:1.08rem; color:var(--ink-soft); max-width:480px; margin-bottom:32px; }
+  .hero-ctas{ display:flex; gap:14px; flex-wrap:wrap; }
+  .btn-primary{
+    background:var(--navy-900); color:#fff; padding:14px 26px; border-radius:6px; text-decoration:none;
+    font-weight:700; font-size:0.95rem; display:inline-flex; align-items:center; gap:8px;
+  }
+  .btn-secondary{
+    border:1.5px solid var(--navy-800); color:var(--navy-900); padding:14px 26px; border-radius:6px;
+    text-decoration:none; font-weight:700; font-size:0.95rem;
+  }
+
+  .badge-card{
+    background:var(--navy-900); border-radius:14px; padding:32px; color:#fff;
+    position:relative; border:1px solid var(--navy-600);
+  }
+  .badge-card::before{
+    content:""; position:absolute; top:0; right:0; width:70px; height:70px;
+    background:var(--amber-500); clip-path:polygon(100% 0, 0 0, 100% 100%); border-radius:0 14px 0 0;
+  }
+  .badge-rank{ font-family:'JetBrains Mono',monospace; font-size:0.7rem; letter-spacing:0.12em; color:var(--amber-500); }
+  .badge-card h3{ color:#fff; font-size:1.4rem; margin:10px 0 14px; }
+  .badge-card p{ color:#C9D2E3; font-size:0.92rem; }
+  .badge-stats{ display:flex; gap:22px; margin-top:22px; padding-top:20px; border-top:1px solid rgba(255,255,255,0.15); }
+  .badge-stat b{ display:block; font-size:1.5rem; font-family:'Noto Serif TC',serif; color:var(--amber-500); }
+  .badge-stat span{ font-size:0.72rem; color:#9FADC7; }
+
+  /* SERVICES */
+  section{ padding:64px 0; }
+  .section-head{ margin-bottom:40px; max-width:560px; }
+  .section-head h2{ font-size:2rem; margin-top:10px; }
+  .services-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
+  .svc-card{
+    background:var(--paper-card); border:1px solid var(--line); border-radius:10px; padding:26px 22px;
+    transition:border-color .2s;
+  }
+  .svc-card .num{ font-family:'JetBrains Mono',monospace; color:var(--amber-600); font-size:0.75rem; }
+  .svc-icon{
+    width:44px; height:44px; border-radius:8px; background:var(--navy-800);
+    display:flex; align-items:center; justify-content:center; margin:14px 0 16px;
+  }
+  .svc-icon svg{ width:22px; height:22px; }
+  .svc-card h3{ font-size:1.05rem; margin-bottom:8px; }
+  .svc-card p{ font-size:0.86rem; color:var(--ink-soft); }
+
+  /* TESTIMONIALS */
+  .testi-wrap{ background:var(--navy-900); border-radius:16px; padding:48px 44px; color:#fff; position:relative; overflow:hidden; }
+  .testi-wrap .section-head h2{ color:#fff; }
+  .testi-wrap .eyebrow{ color:var(--amber-500); }
+  .testi-track{ display:flex; gap:22px; overflow:hidden; }
+  .testi-card{
+    background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:10px;
+    padding:22px; flex:0 0 calc(33.333% - 15px); min-width:0;
+  }
+  .stars{ color:var(--amber-500); font-size:0.85rem; letter-spacing:2px; margin-bottom:10px; }
+  .testi-card p{ font-size:0.88rem; color:#D7DEEC; margin-bottom:14px; }
+  .testi-author{ font-size:0.82rem; font-weight:700; color:#fff; }
+  .testi-controls{ display:flex; justify-content:space-between; align-items:center; margin-top:26px; }
+  .dots{ display:flex; gap:8px; }
+  .dot{ width:7px; height:7px; border-radius:50%; background:rgba(255,255,255,0.25); }
+  .dot.on{ background:var(--amber-500); }
+  .google-link{ color:var(--amber-500); text-decoration:none; font-size:0.82rem; font-weight:700; }
+
+  /* CONTACT STRIP */
+  .contact-strip{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:18px;
+  }
+  .cs-card{
+    background:var(--paper-card); border:1px solid var(--line); border-radius:10px; padding:22px; text-align:center;
+  }
+  .cs-card .ico{ font-size:1.3rem; margin-bottom:10px; }
+  .cs-card h4{ font-size:0.95rem; margin-bottom:4px; }
+  .cs-card p{ font-size:0.82rem; color:var(--ink-soft); }
+
+  footer{ background:var(--navy-900); color:#9FADC7; padding:40px 0; font-size:0.82rem; }
+  footer .wrap{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; }
+  footer strong{ color:#fff; }
+
+  .note{
+    background:#FDF1DE; border:1px dashed var(--amber-500); color:var(--amber-600);
+    font-family:'JetBrains Mono',monospace; font-size:0.7rem; padding:8px 12px; border-radius:6px;
+    display:inline-block; margin-top:8px;
+  }
+
+  @media (max-width:860px){
+    nav, .lang-toggle{ display:none; }
+    .hero-grid{ grid-template-columns:1fr; }
+    .services-grid{ grid-template-columns:repeat(2,1fr); }
+    .contact-strip{ grid-template-columns:repeat(2,1fr); }
+    .testi-card{ flex:0 0 100%; }
+    .hero h1{ font-size:2.1rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <div class="brand">
+      <div class="brand-mark">
+        <svg viewBox="0 0 60 60" fill="none"><path d="M30 12 C38 24, 42 32, 42 38 C42 46, 37 51, 30 51 C23 51, 18 46, 18 38 C18 32, 22 24, 30 12 Z" fill="#EAF0F7"/><path d="M34 22 L26 36 L31 36 L27 48 L40 30 L33 30 Z" fill="#D98F3A"/></svg>
+      </div>
+      <div>
+        <div class="brand-name">華騰工程行</div>
+        <div class="brand-sub">HUA TENG ENGINEERING</div>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#" class="active">首頁</a></li>
+        <li><a href="#services">服務項目</a></li>
+        <li><a href="#gallery">作品實績</a></li>
+        <li><a href="#about">關於我們</a></li>
+        <li><a href="#contact">聯絡預約</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <div class="lang-toggle"><button class="on">中文</button><button>EN</button></div>
+      <button class="call-btn">📞 0938-969-739</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">桃園大溪 · 甲級證照水電團隊</span>
+      <h1>家裡水電有狀況，<br>找<span class="accent">華騰</span>準沒錯。</h1>
+      <p class="lead">從漏水搶修到全屋配線，甲級室內配線技術士團隊到府勘查、當日報價，讓您的居家修繕安心又踏實。</p>
+      <div class="hero-ctas">
+        <a class="btn-primary" href="#contact">預約到府估價 →</a>
+        <a class="btn-secondary" href="#contact">LINE 諮詢</a>
+      </div>
+    </div>
+    <div class="badge-card">
+      <div class="badge-rank">CERTIFIED · TAIWAN A-CLASS</div>
+      <h3>甲級室內配線技術士</h3>
+      <p>台灣電匠證照最高等級，一般僅授課教師或自營工程行師傅具備，代表最高規格的施工專業與安全把關。</p>
+      <div class="badge-stats">
+        <div class="badge-stat"><b>60+</b><span>五星 Google 評論</span></div>
+        <div class="badge-stat"><b>24hr</b><span>緊急到府服務</span></div>
+        <div class="badge-stat"><b>甲級</b><span>最高技術等級</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="trade-divider">
+  <svg viewBox="0 0 1080 22" preserveAspectRatio="none">
+    <line x1="0" y1="11" x2="1080" y2="11" stroke="#D98F3A" stroke-width="1"/>
+    <circle cx="90" cy="11" r="4" fill="#F6F3ED" stroke="#1B2A4A" stroke-width="1.5"/>
+    <path d="M240 3 L228 15 L236 15 L226 21 L246 7 L238 7 Z" fill="#1B2A4A"/>
+    <circle cx="400" cy="11" r="4" fill="#F6F3ED" stroke="#1B2A4A" stroke-width="1.5"/>
+    <path d="M560 3 L548 15 L556 15 L546 21 L566 7 L558 7 Z" fill="#1B2A4A"/>
+    <circle cx="720" cy="11" r="4" fill="#F6F3ED" stroke="#1B2A4A" stroke-width="1.5"/>
+    <path d="M860 3 L848 15 L856 15 L846 21 L866 7 L858 7 Z" fill="#1B2A4A"/>
+    <circle cx="990" cy="11" r="4" fill="#F6F3ED" stroke="#1B2A4A" stroke-width="1.5"/>
+  </svg>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">服務項目</span>
+      <h2>從緊急搶修到全屋工程</h2>
+    </div>
+    <div class="services-grid">
+      <div class="svc-card">
+        <span class="num">01</span>
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z" fill="#D98F3A"/></svg></div>
+        <h3>24小時緊急維修</h3>
+        <p>漏水、跳電、馬達故障，隨call隨到，假日也服務。</p>
+      </div>
+      <div class="svc-card">
+        <span class="num">02</span>
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2c4 5 6 8 6 11a6 6 0 11-12 0c0-3 2-6 6-11z" fill="#D98F3A"/></svg></div>
+        <h3>水電安裝工程</h3>
+        <p>熱水器、馬桶、插座迴路、配電盤新裝與更換。</p>
+      </div>
+      <div class="svc-card">
+        <span class="num">03</span>
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="2" fill="#D98F3A"/></svg></div>
+        <h3>老屋管線汰換</h3>
+        <p>全屋水管、電線重新配置，含甲級證照配線把關。</p>
+      </div>
+      <div class="svc-card">
+        <span class="num">04</span>
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" fill="#D98F3A"/></svg></div>
+        <h3>店面／商用工程</h3>
+        <p>店鋪裝修水電規劃，配合工期到場施工。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="testimonials">
+  <div class="wrap">
+    <div class="testi-wrap">
+      <div class="section-head">
+        <span class="eyebrow">客戶怎麼說</span>
+        <h2>60+ 則五星好評的原因</h2>
+      </div>
+      <div class="testi-track">
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p>「師傅非常認真，電話聯絡後當天就抽空來現場勘查、報價，讓事主非常安心。」</p>
+          <div class="testi-author">Laura Liu</div>
+        </div>
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p>「水塔進水故障，師傅現場評估後備齊材料，一下子就安裝完成，收費也合理。」</p>
+          <div class="testi-author">王應明</div>
+        </div>
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p>「施工整潔、馬桶裝得很漂亮，報價合理，這年頭好的水電真的難找。」</p>
+          <div class="testi-author">Leon Chang</div>
+        </div>
+      </div>
+      <div class="testi-controls">
+        <div class="dots"><span class="dot on"></span><span class="dot"></span><span class="dot"></span></div>
+        <a class="google-link" href="#">查看全部 Google 評論 →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">聯絡與預約</span>
+      <h2>三種方式，馬上聯絡華騰</h2>
+    </div>
+    <div class="contact-strip">
+      <div class="cs-card">
+        <div class="ico">📞</div>
+        <h4>電話</h4>
+        <p>0938-969-739</p>
+      </div>
+      <div class="cs-card">
+        <div class="ico">💬</div>
+        <h4>LINE 諮詢</h4>
+        <p>掃描 QR Code 加入</p>
+        <div class="note">placeholder QR</div>
+      </div>
+      <div class="cs-card">
+        <div class="ico">🗓️</div>
+        <h4>線上預約通話</h4>
+        <p>Calendly 30 分鐘</p>
+      </div>
+      <div class="cs-card">
+        <div class="ico">📍</div>
+        <h4>服務區域</h4>
+        <p>桃園大溪，鄰近地區皆服務</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><strong>華騰工程行</strong> · 桃園大溪 · 甲級室內配線技術士</div>
+    <div>© 2026 Hua Teng Engineering</div>
+  </div>
+</footer>
+
+</body>
+</html>
