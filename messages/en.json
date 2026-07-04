@@ -146,6 +146,11 @@
     "mapTitle": "Where we are",
     "mapIframeTitle": "Map of Hua Teng Engineering's location (Daxi, Taoyuan)"
   },
+  "notFound": {
+    "title": "Page not found",
+    "text": "The page you're looking for may have moved or doesn't exist. Head back home or get in touch.",
+    "backHome": "Back to Home"
+  },
   "trustBadge": {
     "rank": "CERTIFIED · TAIWAN A-CLASS",
     "title": "Class A Indoor-Wiring Technician",

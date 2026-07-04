@@ -3,7 +3,8 @@ import { JetBrains_Mono, Noto_Sans_TC, Noto_Serif_TC } from "next/font/google";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { routing } from "@/i18n/routing";
+import { routing, type Locale } from "@/i18n/routing";
+import { localizedAlternates, SITE_URL } from "@/lib/metadata";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "../globals.css";
@@ -38,8 +39,10 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "home" });
   return {
+    metadataBase: new URL(SITE_URL),
     title: t("metaTitle"),
     description: t("metaDescription"),
+    alternates: localizedAlternates("/", locale as Locale),
   };
 }
 

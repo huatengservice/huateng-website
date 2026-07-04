@@ -5,6 +5,7 @@ import { use } from "react";
 import { Link } from "@/i18n/navigation";
 import { getServices, site } from "@/lib/content";
 import type { Locale } from "@/i18n/routing";
+import { localizedAlternates } from "@/lib/metadata";
 import ServiceIcon from "@/components/ServiceIcon";
 import TradeDivider from "@/components/TradeDivider";
 
@@ -15,7 +16,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "services" });
-  return { title: t("metaTitle"), description: t("metaDescription") };
+  return {
+    title: t("metaTitle"),
+    description: t("metaDescription"),
+    alternates: localizedAlternates("/services", locale as Locale),
+  };
 }
 
 export default function ServicesPage({
