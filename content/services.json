@@ -1,0 +1,62 @@
+[
+  {
+    "id": "emergency",
+    "icon": "zap",
+    "name_zh": "24小時緊急維修",
+    "name_en": "24-Hour Emergency Repair",
+    "description_zh": "漏水、跳電、馬達故障，隨 call 隨到，假日也服務。",
+    "description_en": "Leaks, tripped breakers, failed pumps — on call around the clock, weekends included.",
+    "details_zh": "水管爆裂、電路跳電、抽水馬達故障這類狀況不能等。來電後我們會盡快安排師傅到府，先排除危險再徹底修復，並說明故障原因與後續保養建議。",
+    "details_en": "Burst pipes, tripped circuits, and failed water pumps can't wait. Call us and we'll dispatch a technician promptly — securing the hazard first, then fixing it properly and explaining the cause and how to prevent it."
+  },
+  {
+    "id": "plumbing-repair",
+    "icon": "droplet",
+    "name_zh": "水管維修・漏水處理",
+    "name_en": "Plumbing Repair & Leak Detection",
+    "description_zh": "漏水抓漏、水管堵塞、水壓異常，找出根源徹底處理。",
+    "description_en": "Leak detection, blocked drains, water-pressure issues — we find the root cause and fix it.",
+    "details_zh": "從天花板滲水、牆壁壁癌到排水管堵塞，我們以儀器與經驗找出漏水點，避免不必要的打牆，並提供修復前後照片紀錄。",
+    "details_en": "From ceiling seepage and wall damp to blocked drains, we locate the leak with instruments and experience — avoiding unnecessary demolition — and document the repair with before/after photos."
+  },
+  {
+    "id": "electrical-repair",
+    "icon": "plug",
+    "name_zh": "電路檢修・故障排除",
+    "name_en": "Electrical Inspection & Troubleshooting",
+    "description_zh": "跳電、插座無電、電線老化，甲級技術士安全檢測。",
+    "description_en": "Tripping breakers, dead outlets, aging wiring — safely diagnosed by Class A technicians.",
+    "details_zh": "電的問題馬虎不得。甲級室內配線技術士依法規檢測迴路負載與老化情形，找出跳電或無電的真正原因，給您安全、符合法規的修復方案。",
+    "details_en": "Electrical faults deserve real expertise. Our Class A licensed technicians test circuit loads and wiring condition to code, find the true cause of trips or dead outlets, and repair to a safe, compliant standard."
+  },
+  {
+    "id": "installation",
+    "icon": "wrench",
+    "name_zh": "水電設備安裝",
+    "name_en": "Fixture & Equipment Installation",
+    "description_zh": "熱水器、馬桶、插座迴路、配電盤新裝與更換。",
+    "description_en": "Water heaters, toilets, new circuits, and distribution-panel installation or replacement.",
+    "details_zh": "熱水器、馬桶、水龍頭、專用插座迴路、配電盤更新——安裝前現場評估、報價透明，安裝後測試完成並清潔現場才離開。",
+    "details_en": "Water heaters, toilets, faucets, dedicated circuits, panel upgrades — we assess on-site before quoting, test everything after installation, and leave the site clean."
+  },
+  {
+    "id": "renovation",
+    "icon": "layers",
+    "name_zh": "老屋管線汰換",
+    "name_en": "Whole-House Repiping & Rewiring",
+    "description_zh": "全屋水管、電線重新配置，含甲級證照配線把關。",
+    "description_en": "Complete replacement of aging pipes and wiring, certified to Class A standards.",
+    "details_zh": "30 年以上老屋的水管與電線多已老化，是漏水與電氣火災的隱患。我們規劃全屋管線汰換，配線由甲級技術士把關，讓老屋住得跟新屋一樣安心。",
+    "details_en": "In houses over 30 years old, aging pipes and wiring are the main causes of leaks and electrical fires. We plan complete repiping and rewiring, with all wiring certified by our Class A technician — old house, new peace of mind."
+  },
+  {
+    "id": "commercial",
+    "icon": "building",
+    "name_zh": "店面／商用工程",
+    "name_en": "Commercial & Shopfront Projects",
+    "description_zh": "店鋪裝修水電規劃，配合工期到場施工。",
+    "description_en": "Plumbing and electrical planning for shop fit-outs, scheduled around your timeline.",
+    "details_zh": "店面裝修、辦公室遷入的水電規劃與施工，配合設計師與工班的工期，提供圖面溝通與竣工紀錄，維修保固有保障。",
+    "details_en": "Plumbing and electrical work for shop fit-outs and office moves. We coordinate with your designer and other trades, communicate with drawings, and hand over as-built records with warranty coverage."
+  }
+]

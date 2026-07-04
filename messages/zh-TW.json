@@ -1,0 +1,50 @@
+{
+  "common": {
+    "brandName": "華騰工程行",
+    "brandNameEn": "HUA TENG ENGINEERING",
+    "phoneDisplay": "0938-969-739",
+    "callNow": "立即來電",
+    "bookVisit": "預約到府估價",
+    "lineConsult": "LINE 諮詢",
+    "viewAllReviews": "查看全部 Google 評論",
+    "placeholderNote": "示意圖片，實際照片更新中"
+  },
+  "nav": {
+    "home": "首頁",
+    "services": "服務項目",
+    "gallery": "作品實績",
+    "about": "關於我們",
+    "contact": "聯絡預約",
+    "openMenu": "開啟選單",
+    "closeMenu": "關閉選單"
+  },
+  "footer": {
+    "tagline": "桃園大溪 · 甲級室內配線技術士",
+    "serviceArea": "服務區域：桃園大溪為據點，鄰近地區皆可服務",
+    "copyright": "© {year} 華騰工程行 Hua Teng Engineering"
+  },
+  "languageToggle": {
+    "label": "切換語言",
+    "zh": "中文",
+    "en": "EN"
+  },
+  "home": {
+    "metaTitle": "華騰工程行｜桃園大溪水電維修・甲級證照團隊",
+    "metaDescription": "桃園大溪專業水電行，甲級室內配線技術士團隊。24小時緊急維修、水電安裝、老屋管線汰換。60+ 五星 Google 評論，到府勘查、當日報價。",
+    "heroEyebrow": "桃園大溪 · 甲級證照水電團隊",
+    "heroTitleLine1": "家裡水電有狀況，",
+    "heroTitleLine2Pre": "找",
+    "heroTitleAccent": "華騰",
+    "heroTitleLine2Post": "準沒錯。",
+    "heroLead": "從漏水搶修到全屋配線，甲級室內配線技術士團隊到府勘查、當日報價，讓您的居家修繕安心又踏實。"
+  },
+  "trustBadge": {
+    "rank": "CERTIFIED · TAIWAN A-CLASS",
+    "title": "甲級室內配線技術士",
+    "description": "台灣室內配線證照最高等級，一般僅授課教師或自營工程行師傅具備，代表最高規格的施工專業與安全把關。",
+    "statReviews": "五星 Google 評論",
+    "statEmergency": "緊急到府服務",
+    "statLevel": "最高技術等級",
+    "statLevelValue": "甲級"
+  }
+}

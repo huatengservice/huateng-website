@@ -1,0 +1,30 @@
+<svg viewBox="0 0 400 160" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1B2A4A"/>
+      <stop offset="100%" stop-color="#0F1B33"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Icon badge -->
+  <circle cx="60" cy="60" r="52" fill="url(#badgeGrad)"/>
+  <circle cx="60" cy="60" r="52" fill="none" stroke="#D98F3A" stroke-width="2.5"/>
+
+  <!-- Water drop shape -->
+  <path d="M60 28 C 74 46, 80 58, 80 68 C 80 82, 71 90, 60 90 C 49 90, 40 82, 40 68 C 40 58, 46 46, 60 28 Z"
+        fill="#EAF0F7" opacity="0.95"/>
+
+  <!-- Lightning bolt cut into the drop -->
+  <path d="M66 42 L52 66 L60 66 L54 82 L74 56 L64 56 Z"
+        fill="#D98F3A"/>
+
+  <!-- Wordmark -->
+  <text x="135" y="62" font-family="'Noto Serif TC', 'PMingLiU', serif" font-size="34"
+        font-weight="700" fill="#1B2A4A">華騰工程行</text>
+  <text x="135" y="88" font-family="Arial, sans-serif" font-size="14" letter-spacing="2"
+        fill="#D98F3A">HUA TENG ENGINEERING</text>
+
+  <!-- Tagline -->
+  <text x="135" y="112" font-family="'Noto Sans TC', Arial, sans-serif" font-size="13"
+        fill="#5A6B85">甲級證照 專業水電 · 桃園大溪</text>
+</svg>
