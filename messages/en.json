@@ -36,7 +36,21 @@
     "heroTitleLine2Pre": "",
     "heroTitleAccent": "Hua Teng",
     "heroTitleLine2Post": " has you covered.",
-    "heroLead": "From emergency leak repair to whole-house rewiring — our Class A licensed team surveys on-site and quotes the same day, so your home repairs are in safe hands."
+    "heroLead": "From emergency leak repair to whole-house rewiring — our Class A licensed team surveys on-site and quotes the same day, so your home repairs are in safe hands.",
+    "servicesEyebrow": "Our Services",
+    "servicesTitle": "From emergency fixes to full renovations",
+    "servicesViewAll": "See all services",
+    "testimonialsEyebrow": "What Customers Say",
+    "testimonialsTitle": "The reason behind 60+ five-star reviews",
+    "contactEyebrow": "Contact & Booking",
+    "contactTitle": "Three ways to reach Hua Teng right now",
+    "contactPhone": "Phone",
+    "contactLine": "LINE Chat",
+    "contactLineDesc": "Scan the QR code to connect",
+    "contactCalendly": "Book a Call",
+    "contactCalendlyDesc": "30 minutes via Calendly",
+    "contactArea": "Service Area",
+    "contactAreaDesc": "Daxi, Taoyuan and all nearby areas"
   },
   "trustBadge": {
     "rank": "CERTIFIED · TAIWAN A-CLASS",
