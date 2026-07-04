@@ -52,6 +52,17 @@
     "contactArea": "服務區域",
     "contactAreaDesc": "桃園大溪，鄰近地區皆服務"
   },
+  "services": {
+    "metaTitle": "服務項目｜華騰工程行 桃園大溪水電",
+    "metaDescription": "華騰工程行服務項目：24小時緊急維修、漏水抓漏、電路檢修、水電設備安裝、老屋管線汰換、店面商用工程。甲級室內配線技術士施工把關。",
+    "eyebrow": "服務項目",
+    "title": "從緊急搶修到全屋工程",
+    "lead": "不論是半夜漏水的緊急狀況，還是老屋翻新的完整規劃，華騰以甲級證照的專業標準，把每一件工程做到位。",
+    "ctaTitle": "不確定您的狀況屬於哪一種？",
+    "ctaText": "拍張照、描述一下狀況，我們幫您判斷。到府勘查、當日報價。",
+    "ctaButton": "聯絡華騰",
+    "ctaCall": "直接來電"
+  },
   "trustBadge": {
     "rank": "CERTIFIED · TAIWAN A-CLASS",
     "title": "甲級室內配線技術士",

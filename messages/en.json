@@ -52,6 +52,17 @@
     "contactArea": "Service Area",
     "contactAreaDesc": "Daxi, Taoyuan and all nearby areas"
   },
+  "services": {
+    "metaTitle": "Services | Hua Teng Engineering — Plumbing & Electrical, Daxi Taoyuan",
+    "metaDescription": "Hua Teng Engineering services: 24-hour emergency repair, leak detection, electrical troubleshooting, fixture installation, whole-house repiping and rewiring, and commercial projects — all overseen by a Class A licensed technician.",
+    "eyebrow": "Our Services",
+    "title": "From emergency fixes to full renovations",
+    "lead": "Whether it's a midnight leak or a complete rewiring plan for an older home, Hua Teng delivers every job to Class A certified standards.",
+    "ctaTitle": "Not sure which service you need?",
+    "ctaText": "Snap a photo and describe the problem — we'll figure it out. On-site survey with same-day quote.",
+    "ctaButton": "Contact Hua Teng",
+    "ctaCall": "Call Now"
+  },
   "trustBadge": {
     "rank": "CERTIFIED · TAIWAN A-CLASS",
     "title": "Class A Indoor-Wiring Technician",
