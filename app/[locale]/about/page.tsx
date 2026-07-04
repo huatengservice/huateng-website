@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import { use } from "react";
 import { Link } from "@/i18n/navigation";
 import { site } from "@/lib/content";
+import { localizedAlternates } from "@/lib/metadata";
 import type { Locale } from "@/i18n/routing";
 import TradeDivider from "@/components/TradeDivider";
 import BrandMark from "@/components/BrandMark";
@@ -15,7 +16,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "about" });
-  return { title: t("metaTitle"), description: t("metaDescription") };
+  return {
+    title: t("metaTitle"),
+    description: t("metaDescription"),
+    alternates: localizedAlternates("/about", locale as Locale),
+  };
 }
 
 export default function AboutPage({

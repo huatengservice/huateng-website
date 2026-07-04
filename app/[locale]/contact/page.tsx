@@ -4,6 +4,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { useTranslations } from "next-intl";
 import { use } from "react";
 import { getAddress, getServices, site } from "@/lib/content";
+import { localizedAlternates } from "@/lib/metadata";
 import type { Locale } from "@/i18n/routing";
 import TradeDivider from "@/components/TradeDivider";
 import ContactForm from "@/components/ContactForm";
@@ -16,7 +17,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "contact" });
-  return { title: t("metaTitle"), description: t("metaDescription") };
+  return {
+    title: t("metaTitle"),
+    description: t("metaDescription"),
+    alternates: localizedAlternates("/contact", locale as Locale),
+  };
 }
 
 export default function ContactPage({
