@@ -44,11 +44,26 @@ export default function ContactForm({ services }: { services: Service[] }) {
 
     setStatus("sending");
     try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(values),
-      });
+      // Web3Forms' free tier only accepts submissions sent from the
+      // visitor's browser, so we post to their API directly (the access
+      // key is public by design). Without a key, fall back to the local
+      // placeholder endpoint so the flow still works in development.
+      const res = site.web3formsAccessKey
+        ? await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              access_key: site.web3formsAccessKey,
+              subject: `網站聯絡表單：${values.name}`,
+              from_name: "華騰工程行網站",
+              ...values,
+            }),
+          })
+        : await fetch("/api/contact", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(values),
+          });
       if (!res.ok) throw new Error("submit_failed");
       setStatus("success");
     } catch {

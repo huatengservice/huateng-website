@@ -9,6 +9,10 @@ interface ContactPayload {
   botcheck?: string;
 }
 
+// Fallback endpoint used only when no Web3Forms access key is configured
+// (production submits to Web3Forms directly from the browser — their free
+// tier rejects server-side calls). Accepts and logs so the UX flow still
+// works, but nothing is delivered.
 export async function POST(request: Request) {
   let body: ContactPayload;
   try {
@@ -45,40 +49,10 @@ export async function POST(request: Request) {
     );
   }
 
-  const accessKey = process.env.WEB3FORMS_ACCESS_KEY;
-  if (!accessKey) {
-    // Placeholder mode until a Web3Forms access key is configured in Vercel:
-    // acknowledge the submission so the UX flow works, but log that it was
-    // not delivered anywhere.
-    console.warn(
-      "[contact] WEB3FORMS_ACCESS_KEY not set — submission NOT delivered:",
-      { name, phone, service },
-    );
-    return NextResponse.json({ ok: true, delivered: false });
-  }
-
-  const response = await fetch("https://api.web3forms.com/submit", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      access_key: accessKey,
-      subject: `網站聯絡表單：${name}`,
-      from_name: "華騰工程行網站",
-      name,
-      phone,
-      service,
-      message,
-    }),
+  console.warn("[contact] no Web3Forms key — submission NOT delivered:", {
+    name,
+    phone,
+    service,
   });
-
-  if (!response.ok) {
-    // Surface Web3Forms' reason in Vercel logs (bad key, unverified email, …)
-    const detail = await response.text().catch(() => "");
-    console.error(
-      `[contact] Web3Forms rejected submission: HTTP ${response.status}`,
-      detail.slice(0, 500),
-    );
-    return NextResponse.json({ ok: false, error: "upstream" }, { status: 502 });
-  }
-  return NextResponse.json({ ok: true, delivered: true });
+  return NextResponse.json({ ok: true, delivered: false });
 }

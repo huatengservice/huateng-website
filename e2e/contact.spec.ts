@@ -40,6 +40,14 @@ test.describe("contact page", () => {
   });
 
   test("form submits valid data and shows success state", async ({ page }) => {
+    // Stub Web3Forms so CI runs don't send real emails
+    await page.route("https://api.web3forms.com/submit", (route) =>
+      route.fulfill({
+        status: 200,
+        contentType: "application/json",
+        body: JSON.stringify({ success: true }),
+      }),
+    );
     await page.goto("/contact");
     await page.getByLabel(/姓名/).fill("測試客戶");
     await page.getByLabel(/聯絡電話/).fill("0912-345-678");
