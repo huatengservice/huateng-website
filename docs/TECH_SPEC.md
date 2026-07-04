@@ -15,21 +15,11 @@
 - **i18n:** `next-intl` or `next-i18next` for the zh-TW/English toggle 
   (decide during scaffold PR — next-intl has better App Router support as 
   of early 2026, verify current recommendation when building)
-- **Hosting:** GitHub Pages (free) — static export (`output: 'export'` in 
-  `next.config.js`). No server-side features are needed for this site 
-  (no API routes, no ISR, no middleware), so static export is sufficient.
-  **Constraint:** do NOT use Next.js Middleware for locale detection/redirect 
-  (common in default i18n library setups) — middleware requires a live server 
-  and is incompatible with static export. Use plain static locale routes 
-  (e.g. `/zh-tw/...`, `/en/...`) with manual links for the language toggle 
-  instead of automatic browser-based redirection.
+- **Hosting:** Vercel (free tier)
 - **Forms:** Third-party form handler (Formspree, Web3Forms, or similar free 
   tier) unless a Vercel serverless function is preferred — see PRD open question
-- **Image handling:** `next/image` with `unoptimized: true` (required for 
-  static export — on-the-fly optimization needs a server). Pre-optimize/
-  compress images manually before adding them to `/public/images`. 
-  Placeholder images via a placeholder service (e.g. Picsum) until real 
-  photos are supplied.
+- **Image handling:** `next/image` for automatic optimization; placeholder 
+  images via a placeholder service (e.g. Picsum) until real photos are supplied
 
 ## 2. Folder Structure (proposed)
 ```
@@ -126,16 +116,12 @@ Latest 2 versions of Chrome, Safari, Edge, Firefox; iOS Safari and Android
 Chrome for mobile (majority of expected traffic).
 
 ## 8. Deployment
-- **GitHub Pages**, deployed via a GitHub Actions workflow 
-  (`.github/workflows/deploy.yml`) that runs on push to `main`:
-  1. Install dependencies
-  2. `next build` (with `output: 'export'`) → produces static `/out` folder
-  3. Deploy `/out` to the `gh-pages` branch (or use GitHub's native Pages 
-     Actions deployment, `actions/deploy-pages`)
-- No automatic PR preview deployments (unlike Vercel) — review branches by 
-  running locally (`npm run dev`, or `next build && npx serve out`) before 
-  merging
-- Repo Settings → Pages → set source to the deployment branch/workflow
+- **During development:** no hosting connected yet — review each PR by 
+  running locally (`npm run dev`), not via preview links
+- **At the end, once the full site is built:** connect Vercel to the repo 
+  (see SETUP.md) — this triggers the first deployment and, going forward, 
+  every future push to `main` auto-deploys to production
+- No manual deploy steps required once Vercel is connected
 
 ## 9. Open Technical Decisions
 - [ ] TypeScript vs JavaScript — defaulting to TypeScript unless you object

@@ -138,7 +138,7 @@ user accounts, or inventory system involved.
 7. i18n pass (English content + toggle wired everywhere)
 8. Testimonials carousel
 9. QA pass: responsive, accessibility, performance, cross-browser
-10. Launch to Vercel production
+10. Connect Vercel and launch to production
 
 ## 9. Stakeholders
 - **Business owner:** [You] — final approval on content, branding, launch
