@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand palette — from design/huateng-mockup.html */
+  --color-navy-900: #0f1b33;
+  --color-navy-800: #1b2a4a;
+  --color-navy-600: #33456b;
+  --color-amber-500: #d98f3a;
+  --color-amber-600: #bd7527;
+  --color-amber-700: #9a5e1d;
+  --color-paper: #f6f3ed;
+  --color-paper-card: #ffffff;
+  --color-ink-soft: #5a6b85;
+  --color-line: #e4dfd4;
+
+  --font-sans: var(--font-noto-sans-tc), "Noto Sans TC", sans-serif;
+  --font-serif: var(--font-noto-serif-tc), "Noto Serif TC", serif;
+  --font-mono: var(--font-jetbrains-mono), "JetBrains Mono", monospace;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-navy-800);
+  font-family: var(--font-sans);
+  line-height: 1.7;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-serif);
+  color: var(--color-navy-900);
+}
+
+/* Monospace eyebrow label with amber tick — signature element from the mockup */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  color: var(--color-amber-700);
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 16px;
+  height: 2px;
+  background: var(--color-amber-500);
+  display: inline-block;
+}
