@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" rx="12" fill="#FFFFFF" stroke="#E4DFD4" stroke-width="2"/>
+  <g fill="#C9CFDB">
+    <rect x="24" y="24" width="44" height="44" rx="4"/>
+    <rect x="132" y="24" width="44" height="44" rx="4"/>
+    <rect x="24" y="132" width="44" height="44" rx="4"/>
+    <rect x="84" y="24" width="12" height="12"/>
+    <rect x="104" y="44" width="12" height="12"/>
+    <rect x="84" y="64" width="12" height="12"/>
+    <rect x="24" y="84" width="12" height="12"/>
+    <rect x="44" y="104" width="12" height="12"/>
+    <rect x="64" y="84" width="12" height="12"/>
+    <rect x="84" y="104" width="12" height="12"/>
+    <rect x="104" y="84" width="12" height="12"/>
+    <rect x="124" y="104" width="12" height="12"/>
+    <rect x="144" y="84" width="12" height="12"/>
+    <rect x="164" y="104" width="12" height="12"/>
+    <rect x="84" y="132" width="12" height="12"/>
+    <rect x="104" y="152" width="12" height="12"/>
+    <rect x="124" y="132" width="12" height="12"/>
+    <rect x="144" y="152" width="12" height="12"/>
+    <rect x="164" y="132" width="12" height="12"/>
+  </g>
+  <g fill="#EAF0F7" opacity="0.9">
+    <rect x="30" y="30" width="32" height="32" rx="3"/>
+    <rect x="138" y="30" width="32" height="32" rx="3"/>
+    <rect x="30" y="138" width="32" height="32" rx="3"/>
+  </g>
+  <rect x="35" y="88" width="130" height="26" rx="6" fill="#0F1B33" opacity="0.85"/>
+  <text x="100" y="106" text-anchor="middle" font-family="monospace" font-size="12" fill="#F6F3ED">PLACEHOLDER</text>
+</svg>
