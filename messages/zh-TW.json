@@ -63,6 +63,16 @@
     "ctaButton": "聯絡華騰",
     "ctaCall": "直接來電"
   },
+  "gallery": {
+    "metaTitle": "作品實績｜華騰工程行 桃園大溪水電",
+    "metaDescription": "華騰工程行施工實績：浴室管線汰換、熱水器安裝、配電盤更新、漏水修復、店面配線等施工前後對照。",
+    "eyebrow": "作品實績",
+    "title": "施工前後，一目瞭然",
+    "lead": "每一件工程都以照片記錄施工前後對照。目前為示意圖片，實際施工照片陸續更新中。",
+    "before": "施工前",
+    "after": "施工後",
+    "placeholderNotice": "以下為版面示意圖片，實際施工照片整理中，將陸續替換上線。"
+  },
   "trustBadge": {
     "rank": "CERTIFIED · TAIWAN A-CLASS",
     "title": "甲級室內配線技術士",
