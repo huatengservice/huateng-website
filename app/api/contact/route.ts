@@ -72,6 +72,12 @@ export async function POST(request: Request) {
   });
 
   if (!response.ok) {
+    // Surface Web3Forms' reason in Vercel logs (bad key, unverified email, …)
+    const detail = await response.text().catch(() => "");
+    console.error(
+      `[contact] Web3Forms rejected submission: HTTP ${response.status}`,
+      detail.slice(0, 500),
+    );
     return NextResponse.json({ ok: false, error: "upstream" }, { status: 502 });
   }
   return NextResponse.json({ ok: true, delivered: true });
