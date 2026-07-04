@@ -1,0 +1,50 @@
+{
+  "common": {
+    "brandName": "Hua Teng Engineering",
+    "brandNameEn": "華騰工程行",
+    "phoneDisplay": "0938-969-739",
+    "callNow": "Call Now",
+    "bookVisit": "Book an On-Site Quote",
+    "lineConsult": "Chat on LINE",
+    "viewAllReviews": "See All Google Reviews",
+    "placeholderNote": "Placeholder image — real photos coming soon"
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "gallery": "Gallery",
+    "about": "About",
+    "contact": "Contact",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "footer": {
+    "tagline": "Daxi, Taoyuan · Class A Licensed Electricians",
+    "serviceArea": "Service area: based in Daxi, Taoyuan — serving all nearby areas",
+    "copyright": "© {year} Hua Teng Engineering 華騰工程行"
+  },
+  "languageToggle": {
+    "label": "Switch language",
+    "zh": "中文",
+    "en": "EN"
+  },
+  "home": {
+    "metaTitle": "Hua Teng Engineering | Plumbing & Electrical in Daxi, Taoyuan",
+    "metaDescription": "Professional plumbing and electrical services in Daxi, Taoyuan. Class A licensed indoor-wiring technicians. 24-hour emergency repair, installations, full rewiring. 60+ five-star Google reviews.",
+    "heroEyebrow": "Daxi, Taoyuan · Class A Licensed Team",
+    "heroTitleLine1": "Plumbing or electrical trouble?",
+    "heroTitleLine2Pre": "",
+    "heroTitleAccent": "Hua Teng",
+    "heroTitleLine2Post": " has you covered.",
+    "heroLead": "From emergency leak repair to whole-house rewiring — our Class A licensed team surveys on-site and quotes the same day, so your home repairs are in safe hands."
+  },
+  "trustBadge": {
+    "rank": "CERTIFIED · TAIWAN A-CLASS",
+    "title": "Class A Indoor-Wiring Technician",
+    "description": "The highest indoor-wiring certification in Taiwan — typically held only by instructors or master electricians running their own firms. It means top-grade workmanship and safety on every job.",
+    "statReviews": "Five-star Google reviews",
+    "statEmergency": "Emergency call-out",
+    "statLevel": "Highest license level",
+    "statLevelValue": "Class A"
+  }
+}
