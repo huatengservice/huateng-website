@@ -24,3 +24,31 @@ export function localizedAlternates(
     },
   };
 }
+
+// Full per-page metadata: title/description + canonical/hreflang + Open Graph
+export function pageMetadata({
+  locale,
+  path,
+  title,
+  description,
+}: {
+  locale: Locale;
+  path: string;
+  title: string;
+  description: string;
+}): Metadata {
+  return {
+    title,
+    description,
+    alternates: localizedAlternates(path, locale),
+    openGraph: {
+      title,
+      description,
+      url: localePath(locale, path),
+      siteName: "華騰工程行 Hua Teng Engineering",
+      locale: locale === "en" ? "en_US" : "zh_TW",
+      type: "website",
+      images: [{ url: "/logo.svg" }],
+    },
+  };
+}
