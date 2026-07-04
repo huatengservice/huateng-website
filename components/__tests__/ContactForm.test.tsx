@@ -53,7 +53,7 @@ describe("ContactForm", () => {
     expect(global.fetch).not.toHaveBeenCalled();
   });
 
-  it("submits valid data to /api/contact and shows success", async () => {
+  it("submits valid data to Web3Forms and shows success", async () => {
     (global.fetch as jest.Mock).mockResolvedValue({ ok: true });
     const user = userEvent.setup();
     renderForm();
@@ -71,13 +71,15 @@ describe("ContactForm", () => {
       expect(screen.getByText("已收到您的需求！")).toBeInTheDocument(),
     );
 
+    // Free-tier Web3Forms requires browser-side submission
     expect(global.fetch).toHaveBeenCalledWith(
-      "/api/contact",
+      "https://api.web3forms.com/submit",
       expect.objectContaining({ method: "POST" }),
     );
     const sentBody = JSON.parse(
       (global.fetch as jest.Mock).mock.calls[0][1].body,
     );
+    expect(sentBody.access_key).toBeTruthy();
     expect(sentBody).toMatchObject({
       name: "王小明",
       phone: "0912-345-678",
