@@ -7,17 +7,7 @@ import type { Locale } from "@/i18n/routing";
 import TrustBadge from "@/components/TrustBadge";
 import TradeDivider from "@/components/TradeDivider";
 import ServiceCard from "@/components/ServiceCard";
-
-function Stars() {
-  return (
-    <div
-      aria-hidden="true"
-      className="text-amber-500 mb-2.5 text-sm tracking-[2px]"
-    >
-      ★★★★★
-    </div>
-  );
-}
+import TestimonialCarousel from "@/components/TestimonialCarousel";
 
 export default function HomePage({
   params,
@@ -30,7 +20,7 @@ export default function HomePage({
   const tCommon = useTranslations("common");
 
   const services = getServices(locale).slice(0, 4);
-  const featured = getTestimonials(locale).slice(0, 3);
+  const testimonials = getTestimonials(locale);
 
   return (
     <>
@@ -105,22 +95,7 @@ export default function HomePage({
                 {t("testimonialsTitle")}
               </h2>
             </div>
-            <ul className="grid grid-cols-1 gap-5 md:grid-cols-3">
-              {featured.map((item) => (
-                <li
-                  key={item.author}
-                  className="rounded-xl border border-white/10 bg-white/5 p-5"
-                >
-                  <Stars />
-                  <p className="mb-3.5 text-sm text-[#D7DEEC]">
-                    「{item.text}」
-                  </p>
-                  <div className="text-[0.82rem] font-bold text-white">
-                    {item.author}
-                  </div>
-                </li>
-              ))}
-            </ul>
+            <TestimonialCarousel items={testimonials} />
             <div className="mt-6 text-right">
               <a
                 href={site.googleReviewsUrl}

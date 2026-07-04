@@ -146,6 +146,11 @@
     "mapTitle": "Where we are",
     "mapIframeTitle": "Map of Hua Teng Engineering's location (Daxi, Taoyuan)"
   },
+  "carousel": {
+    "regionLabel": "Customer testimonials carousel",
+    "dotsLabel": "Testimonial pages",
+    "dotLabel": "Testimonials page {page}"
+  },
   "notFound": {
     "title": "Page not found",
     "text": "The page you're looking for may have moved or doesn't exist. Head back home or get in touch.",

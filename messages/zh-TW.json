@@ -146,6 +146,11 @@
     "mapTitle": "服務據點",
     "mapIframeTitle": "華騰工程行位置地圖（桃園大溪）"
   },
+  "carousel": {
+    "regionLabel": "客戶評價輪播",
+    "dotsLabel": "評價分頁",
+    "dotLabel": "第 {page} 頁評價"
+  },
   "notFound": {
     "title": "找不到這個頁面",
     "text": "您要找的頁面可能已移動或不存在。回到首頁，或直接聯絡我們。",
