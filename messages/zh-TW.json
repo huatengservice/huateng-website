@@ -36,7 +36,21 @@
     "heroTitleLine2Pre": "找",
     "heroTitleAccent": "華騰",
     "heroTitleLine2Post": "準沒錯。",
-    "heroLead": "從漏水搶修到全屋配線，甲級室內配線技術士團隊到府勘查、當日報價，讓您的居家修繕安心又踏實。"
+    "heroLead": "從漏水搶修到全屋配線，甲級室內配線技術士團隊到府勘查、當日報價，讓您的居家修繕安心又踏實。",
+    "servicesEyebrow": "服務項目",
+    "servicesTitle": "從緊急搶修到全屋工程",
+    "servicesViewAll": "查看完整服務項目",
+    "testimonialsEyebrow": "客戶怎麼說",
+    "testimonialsTitle": "60+ 則五星好評的原因",
+    "contactEyebrow": "聯絡與預約",
+    "contactTitle": "三種方式，馬上聯絡華騰",
+    "contactPhone": "電話",
+    "contactLine": "LINE 諮詢",
+    "contactLineDesc": "掃描 QR Code 加入",
+    "contactCalendly": "線上預約通話",
+    "contactCalendlyDesc": "Calendly 30 分鐘",
+    "contactArea": "服務區域",
+    "contactAreaDesc": "桃園大溪，鄰近地區皆服務"
   },
   "trustBadge": {
     "rank": "CERTIFIED · TAIWAN A-CLASS",
