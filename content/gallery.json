@@ -1,0 +1,56 @@
+[
+  {
+    "id": "bathroom",
+    "caption_zh": "浴室管線全面汰換",
+    "caption_en": "Complete bathroom repiping",
+    "tag_zh": "桃園大溪 · 老屋翻新",
+    "tag_en": "Daxi, Taoyuan · Renovation",
+    "before": "/images/gallery/bathroom-before.svg",
+    "after": "/images/gallery/bathroom-after.svg"
+  },
+  {
+    "id": "heater",
+    "caption_zh": "熱水器汰舊換新安裝",
+    "caption_en": "Water heater replacement",
+    "tag_zh": "桃園 · 設備安裝",
+    "tag_en": "Taoyuan · Installation",
+    "before": "/images/gallery/heater-before.svg",
+    "after": "/images/gallery/heater-after.svg"
+  },
+  {
+    "id": "panel",
+    "caption_zh": "配電盤更新工程",
+    "caption_en": "Distribution panel upgrade",
+    "tag_zh": "桃園大溪 · 甲級配線",
+    "tag_en": "Daxi, Taoyuan · Class A wiring",
+    "before": "/images/gallery/panel-before.svg",
+    "after": "/images/gallery/panel-after.svg"
+  },
+  {
+    "id": "leak",
+    "caption_zh": "天花板漏水抓漏修復",
+    "caption_en": "Ceiling leak detection and repair",
+    "tag_zh": "大溪 · 緊急維修",
+    "tag_en": "Daxi · Emergency repair",
+    "before": "/images/gallery/leak-before.svg",
+    "after": "/images/gallery/leak-after.svg"
+  },
+  {
+    "id": "storefront",
+    "caption_zh": "店面裝修水電配線",
+    "caption_en": "Shopfront wiring for fit-out",
+    "tag_zh": "桃園 · 商用工程",
+    "tag_en": "Taoyuan · Commercial",
+    "before": "/images/gallery/storefront-before.svg",
+    "after": "/images/gallery/storefront-after.svg"
+  },
+  {
+    "id": "toilet",
+    "caption_zh": "馬桶汰換安裝",
+    "caption_en": "Toilet replacement and installation",
+    "tag_zh": "大溪 · 衛浴設備",
+    "tag_en": "Daxi · Bathroom fixtures",
+    "before": "/images/gallery/toilet-before.svg",
+    "after": "/images/gallery/toilet-after.svg"
+  }
+]

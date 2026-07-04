@@ -63,6 +63,16 @@
     "ctaButton": "Contact Hua Teng",
     "ctaCall": "Call Now"
   },
+  "gallery": {
+    "metaTitle": "Gallery | Hua Teng Engineering — Past Projects",
+    "metaDescription": "Hua Teng Engineering project gallery: bathroom repiping, water heater installation, panel upgrades, leak repairs, and shopfront wiring — before and after.",
+    "eyebrow": "Our Work",
+    "title": "Before and after, at a glance",
+    "lead": "We document every job with before/after photos. Placeholder images are shown for now — real project photos are on the way.",
+    "before": "Before",
+    "after": "After",
+    "placeholderNotice": "The images below are layout placeholders. Real project photos are being prepared and will replace them soon."
+  },
   "trustBadge": {
     "rank": "CERTIFIED · TAIWAN A-CLASS",
     "title": "Class A Indoor-Wiring Technician",

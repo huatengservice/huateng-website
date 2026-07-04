@@ -1,6 +1,7 @@
 import siteConfig from "@/content/site-config.json";
 import servicesData from "@/content/services.json";
 import testimonialsData from "@/content/testimonials.json";
+import galleryData from "@/content/gallery.json";
 import type { Locale } from "@/i18n/routing";
 
 export interface Service {
@@ -30,6 +31,24 @@ export function getServices(locale: Locale): Service[] {
     name: locale === "en" ? s.name_en : s.name_zh,
     description: locale === "en" ? s.description_en : s.description_zh,
     details: locale === "en" ? s.details_en : s.details_zh,
+  }));
+}
+
+export interface GalleryItem {
+  id: string;
+  caption: string;
+  tag: string;
+  before: string;
+  after: string;
+}
+
+export function getGallery(locale: Locale): GalleryItem[] {
+  return galleryData.map((g) => ({
+    id: g.id,
+    caption: locale === "en" ? g.caption_en : g.caption_zh,
+    tag: locale === "en" ? g.tag_en : g.tag_zh,
+    before: g.before,
+    after: g.after,
   }));
 }
 
