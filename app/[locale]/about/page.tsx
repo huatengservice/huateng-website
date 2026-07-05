@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { useTranslations } from "next-intl";
 import { use } from "react";
@@ -57,42 +58,58 @@ export default function AboutPage({
             <p className="text-navy-800 mb-4">{t("storyP2")}</p>
             <p className="font-mono text-ink-soft text-xs">{t("storyNote")}</p>
           </div>
-          <div className="bg-paper-card border-line rounded-xl border p-7">
-            <div className="mb-4 flex items-center gap-3">
-              <BrandMark size={48} />
-              <div>
-                <div className="font-serif text-navy-900 text-lg font-bold">
-                  華騰工程行
-                </div>
-                <div className="font-mono text-ink-soft text-[0.62rem] tracking-widest">
-                  HUA TENG ENGINEERING
+          <div className="bg-paper-card border-line overflow-hidden rounded-xl border">
+            <figure>
+              <Image
+                src="/images/work/on-site-consultation.jpg"
+                alt={t("storyPhotoAlt")}
+                width={928}
+                height={1146}
+                className="aspect-[16/10] w-full object-cover object-[50%_30%]"
+              />
+              <figcaption className="text-ink-soft border-line border-b px-7 py-3 text-xs">
+                {t("storyPhotoCaption")}
+              </figcaption>
+            </figure>
+            <div className="p-7">
+              <div className="mb-4 flex items-center gap-3">
+                <BrandMark size={48} />
+                <div>
+                  <div className="font-serif text-navy-900 text-lg font-bold">
+                    華騰工程行
+                  </div>
+                  <div className="font-mono text-ink-soft text-[0.62rem] tracking-widest">
+                    HUA TENG ENGINEERING
+                  </div>
                 </div>
               </div>
+              <dl className="grid grid-cols-3 gap-4 text-center">
+                <div className="border-line rounded-lg border p-3">
+                  <dd className="font-serif text-amber-600 text-xl font-bold">
+                    {site.reviewCount}
+                  </dd>
+                  <dt className="text-ink-soft text-xs">
+                    {tBadge("statReviews")}
+                  </dt>
+                </div>
+                <div className="border-line rounded-lg border p-3">
+                  <dd className="font-serif text-amber-600 text-xl font-bold">
+                    24hr
+                  </dd>
+                  <dt className="text-ink-soft text-xs">
+                    {tBadge("statEmergency")}
+                  </dt>
+                </div>
+                <div className="border-line rounded-lg border p-3">
+                  <dd className="font-serif text-amber-600 text-xl font-bold">
+                    {tBadge("statLevelValue")}
+                  </dd>
+                  <dt className="text-ink-soft text-xs">
+                    {tBadge("statLevel")}
+                  </dt>
+                </div>
+              </dl>
             </div>
-            <dl className="grid grid-cols-3 gap-4 text-center">
-              <div className="border-line rounded-lg border p-3">
-                <dd className="font-serif text-amber-600 text-xl font-bold">
-                  {site.reviewCount}
-                </dd>
-                <dt className="text-ink-soft text-xs">
-                  {tBadge("statReviews")}
-                </dt>
-              </div>
-              <div className="border-line rounded-lg border p-3">
-                <dd className="font-serif text-amber-600 text-xl font-bold">
-                  24hr
-                </dd>
-                <dt className="text-ink-soft text-xs">
-                  {tBadge("statEmergency")}
-                </dt>
-              </div>
-              <div className="border-line rounded-lg border p-3">
-                <dd className="font-serif text-amber-600 text-xl font-bold">
-                  {tBadge("statLevelValue")}
-                </dd>
-                <dt className="text-ink-soft text-xs">{tBadge("statLevel")}</dt>
-              </div>
-            </dl>
           </div>
         </div>
       </section>
@@ -144,24 +161,32 @@ export default function AboutPage({
           <h2 className="mb-2 text-2xl font-bold">{t("teamTitle")}</h2>
           <p className="text-ink-soft mb-8 text-sm">{t("teamLead")}</p>
           <ul className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-            {(["1", "2"] as const).map((n) => (
-              <li
-                key={n}
-                className="bg-paper-card border-line flex items-center gap-5 rounded-xl border p-6"
-              >
-                <span className="bg-paper border-line text-ink-soft flex h-20 w-20 shrink-0 items-center justify-center rounded-full border border-dashed text-center font-mono text-[0.6rem] leading-tight">
-                  {t("teamPlaceholder")}
-                </span>
-                <div>
-                  <div className="text-navy-900 font-bold">
-                    {t(`teamRole${n}`)}
-                  </div>
-                  <p className="text-ink-soft mt-1 text-sm">
-                    {t(`teamRole${n}Desc`)}
-                  </p>
-                </div>
-              </li>
-            ))}
+            <li className="bg-paper-card border-line flex items-center gap-5 rounded-xl border p-6">
+              <Image
+                src="/images/team/owner-portrait.jpg"
+                alt={t("teamRole1Alt")}
+                width={928}
+                height={1146}
+                className="border-amber-500 h-20 w-20 shrink-0 rounded-full border-2 object-cover object-[50%_18%]"
+              />
+              <div>
+                <div className="text-navy-900 font-bold">{t("teamRole1")}</div>
+                <p className="text-ink-soft mt-1 text-sm">
+                  {t("teamRole1Desc")}
+                </p>
+              </div>
+            </li>
+            <li className="bg-paper-card border-line flex items-center gap-5 rounded-xl border p-6">
+              <span className="bg-paper border-line text-ink-soft flex h-20 w-20 shrink-0 items-center justify-center rounded-full border border-dashed text-center font-mono text-[0.6rem] leading-tight">
+                {t("teamPlaceholder")}
+              </span>
+              <div>
+                <div className="text-navy-900 font-bold">{t("teamRole2")}</div>
+                <p className="text-ink-soft mt-1 text-sm">
+                  {t("teamRole2Desc")}
+                </p>
+              </div>
+            </li>
           </ul>
         </div>
       </section>
