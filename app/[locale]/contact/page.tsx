@@ -33,7 +33,7 @@ export default function ContactPage({
   const { locale } = use(params);
   setRequestLocale(locale);
   const t = useTranslations("contact");
-  const services = getServices(locale);
+  const services = getServices();
 
   return (
     <>
@@ -108,7 +108,7 @@ export default function ContactPage({
                   <h2 className="mb-1 font-bold">{t("areaTitle")}</h2>
                   <p className="text-ink-soft text-sm">{t("areaDesc")}</p>
                   <p className="text-navy-800 mt-2 text-sm font-medium">
-                    {getAddress(locale)}
+                    {getAddress()}
                   </p>
                 </div>
               </div>

@@ -4,7 +4,6 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import BrandMark from "./BrandMark";
-import LanguageToggle from "./LanguageToggle";
 import { site } from "@/lib/content";
 
 const NAV_ITEMS = [
@@ -64,9 +63,6 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <div className="hidden md:block">
-            <LanguageToggle />
-          </div>
           <a
             href={site.phoneHref}
             className="bg-amber-500 text-navy-900 hover:bg-amber-600 rounded-md px-4 py-2.5 text-sm font-bold whitespace-nowrap transition-colors hover:text-white"
@@ -127,9 +123,6 @@ export default function Header() {
                 </li>
               );
             })}
-            <li className="py-3">
-              <LanguageToggle />
-            </li>
           </ul>
         </nav>
       )}

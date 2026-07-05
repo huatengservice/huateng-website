@@ -1,15 +1,7 @@
 import AxeBuilder from "@axe-core/playwright";
 import { expect, test } from "@playwright/test";
 
-const PATHS = [
-  "/",
-  "/services",
-  "/gallery",
-  "/about",
-  "/contact",
-  "/en",
-  "/en/services",
-];
+const PATHS = ["/", "/services", "/gallery", "/about", "/contact"];
 
 // Skip on the mobile project — axe results are viewport-independent enough
 // that running once per page keeps CI fast.

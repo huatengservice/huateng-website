@@ -32,7 +32,7 @@ export default function ServicesPage({
   const { locale } = use(params);
   setRequestLocale(locale);
   const t = useTranslations("services");
-  const services = getServices(locale);
+  const services = getServices();
 
   return (
     <>

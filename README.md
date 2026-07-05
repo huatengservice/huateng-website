@@ -3,9 +3,10 @@
 Marketing website for 華騰工程行 (Hua Teng Engineering), a plumbing & electrical
 services business in 桃園大溪 (Daxi, Taoyuan), Taiwan.
 
-Bilingual (繁體中文 default, English at `/en`), built with Next.js App Router,
-TypeScript, Tailwind CSS, and next-intl. See `/docs` for the business brief,
-PRD, tech spec, and test plan.
+繁體中文 site built with Next.js App Router, TypeScript, Tailwind CSS, and
+next-intl (English version removed at the owner's request 2026-07 — restore
+from git history if needed). See `/docs` for the business brief, PRD, tech
+spec, and test plan.
 
 ## Development
 
@@ -33,7 +34,7 @@ Business content lives in JSON files, separate from components:
 - `content/site-config.json` — phone, Calendly URL, LINE ID, map embed, addresses
 - `content/services.json` — service list (zh/en names, descriptions)
 - `content/testimonials.json` — curated Google-review testimonials (zh/en)
-- `messages/zh-TW.json`, `messages/en.json` — all UI copy per language
+- `messages/zh-TW.json` — all UI copy
 
 ## Deployment
 

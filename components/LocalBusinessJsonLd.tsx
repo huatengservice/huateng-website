@@ -1,5 +1,4 @@
 import { SITE_URL } from "@/lib/metadata";
-import { site } from "@/lib/content";
 
 // LocalBusiness structured data for local-search SEO ("水電 附近" queries)
 export default function LocalBusinessJsonLd() {
