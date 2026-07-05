@@ -19,8 +19,8 @@ export default function HomePage({
   const t = useTranslations("home");
   const tCommon = useTranslations("common");
 
-  const services = getServices(locale).slice(0, 4);
-  const testimonials = getTestimonials(locale);
+  const services = getServices().slice(0, 4);
+  const testimonials = getTestimonials();
 
   return (
     <>

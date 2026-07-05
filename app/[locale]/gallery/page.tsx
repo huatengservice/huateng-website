@@ -31,7 +31,7 @@ export default function GalleryPage({
   const { locale } = use(params);
   setRequestLocale(locale);
   const t = useTranslations("gallery");
-  const items = getGallery(locale);
+  const items = getGallery();
 
   return (
     <>
