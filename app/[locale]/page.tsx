@@ -1,6 +1,7 @@
 import { setRequestLocale } from "next-intl/server";
 import { useTranslations } from "next-intl";
 import { use } from "react";
+import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { getServices, getTestimonials, site } from "@/lib/content";
 import type { Locale } from "@/i18n/routing";
@@ -80,6 +81,41 @@ export default function HomePage({
               {t("servicesViewAll")} <span aria-hidden="true">→</span>
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* Work in action */}
+      <section className="pb-16">
+        <div className="mx-auto max-w-[1080px] px-5 sm:px-7">
+          <div className="mb-10 max-w-[560px]">
+            <span className="eyebrow">{t("workEyebrow")}</span>
+            <h2 className="mt-2.5 text-3xl font-bold">{t("workTitle")}</h2>
+          </div>
+          <ul className="grid grid-cols-1 gap-5 sm:grid-cols-3">
+            {(
+              [
+                ["/images/work/electrical-work.jpg", "Electrical"],
+                ["/images/work/plumbing-installation.jpg", "Plumbing"],
+                ["/images/work/truck-logistics.jpg", "Truck"],
+              ] as const
+            ).map(([src, key]) => (
+              <li
+                key={key}
+                className="border-line overflow-hidden rounded-xl border bg-white"
+              >
+                <Image
+                  src={src}
+                  alt={t(`work${key}Alt`)}
+                  width={928}
+                  height={1146}
+                  className="aspect-[4/5] w-full object-cover"
+                />
+                <p className="text-navy-900 px-4 py-3 text-sm font-bold">
+                  {t(`work${key}Caption`)}
+                </p>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
